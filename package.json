@@ -1,0 +1,13 @@
+{
+    "name": "react-microfrontend-boilerplate-workspace",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "pnpm --stream -r run start-dev"
+    },
+    "dependencies": {
+        "@emotion/is-prop-valid": "^1.2.1",
+        "root-app": "0.0.1-security"
+    }
+}
