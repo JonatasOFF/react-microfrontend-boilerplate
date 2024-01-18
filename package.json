@@ -8,6 +8,7 @@
     },
     "dependencies": {
         "@emotion/is-prop-valid": "^1.2.1",
-        "root-app": "0.0.1-security"
+        "root-app": "0.0.1-security",
+        "zustand": "^4.4.7"
     }
 }

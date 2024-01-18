@@ -15,7 +15,6 @@
     "test": "vitest run --coverage",
     "test-silent": "vitest run --coverage --silent",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prepare": "husky install",
     "preview": "vite preview",
     "format": "prettier --write ."
   },
@@ -55,7 +54,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "eslint-plugin-security": "^1.7.1",
-    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "plop": "^3.1.2",
     "prettier": "^3.0.2",

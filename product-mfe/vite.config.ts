@@ -28,8 +28,12 @@ export default defineConfig({
       name: 'product-mfe',
       filename: 'product-mfe-entry.js',
       shared: ['react', 'react-dom', 'react-router-dom'],
+      remotes: {
+        'store-mfe': 'http://localhost:3002/assets/store-entry.js'
+      },
       exposes: {
         './pages': './src/pages',
+
       },
     }),
   ],

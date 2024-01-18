@@ -1,11 +1,14 @@
-declare module '*.svg' {
-  import React = require('react');
+declare module "store-mfe/store" {
+  type store = {
+    count: number;
+    increment: () => void;
+    decrement: () => void;
+  }
 
-  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
-  const src: string;
-  export default src;
+  export default  {
+    getState: () => store
+  }
 }
-
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   // more env variables...

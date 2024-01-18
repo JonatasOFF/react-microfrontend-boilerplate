@@ -14,6 +14,9 @@ importers:
       root-app:
         specifier: 0.0.1-security
         version: 0.0.1-security
+      zustand:
+        specifier: ^4.4.7
+        version: 4.4.7(react@18.2.0)
 
   product-mfe:
     dependencies:
@@ -117,9 +120,6 @@ importers:
       eslint-plugin-security:
         specifier: ^1.7.1
         version: 1.7.1
-      husky:
-        specifier: ^8.0.3
-        version: 8.0.3
       jsdom:
         specifier: ^22.1.0
         version: 22.1.0
@@ -238,9 +238,6 @@ importers:
       eslint-plugin-security:
         specifier: ^1.7.1
         version: 1.7.1
-      husky:
-        specifier: ^8.0.3
-        version: 8.0.3
       jsdom:
         specifier: ^22.1.0
         version: 22.1.0
@@ -256,6 +253,22 @@ importers:
       vitest:
         specifier: ^0.33.0
         version: 0.33.0(jsdom@22.1.0)
+
+  store:
+    dependencies:
+      '@originjs/vite-plugin-federation':
+        specifier: ^1.3.3
+        version: 1.3.3
+      vite:
+        specifier: ^4.5.0
+        version: 4.5.1(@types/node@20.11.4)
+      vite-tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.3.0(typescript@5.3.3)(vite@4.5.1)
+    devDependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
 
 packages:
 
@@ -2966,12 +2979,6 @@ packages:
       - supports-color
     dev: true
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
-
   /iconv-lite@0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -4941,6 +4948,14 @@ packages:
       requires-port: 1.0.0
     dev: true
 
+  /use-sync-external-store@1.2.0(react@18.2.0):
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
@@ -5274,3 +5289,22 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
+
+  /zustand@4.4.7(react@18.2.0):
+    resolution: {integrity: sha512-QFJWJMdlETcI69paJwhSMJz7PPWjVP8Sjhclxmxmxv/RYI7ZOvR5BHX+ktH0we9gTWQMxcne8q1OY8xxz604gw==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false

@@ -30,6 +30,7 @@ export default defineConfig({
       shared: ['react', 'react-dom', 'react-router-dom'],
       remotes: {
         'product-mfe': 'http://localhost:3001/assets/product-mfe-entry.js',
+        'store-mfe': 'http://localhost:3002/assets/store-entry.js'
       },
     }),
   ],

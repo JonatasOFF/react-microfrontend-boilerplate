@@ -1,10 +1,14 @@
+import { Home } from 'pages/Home';
+import ProductMFE from 'product-mfe/pages';
 import { Outlet, createBrowserRouter } from 'react-router-dom';
-import { api } from 'services/api'
-import ProductMFE from 'product-mfe/pages'
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/product-mfe',
     element: <Outlet />,
     children: [
       {
