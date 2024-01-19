@@ -8,50 +8,38 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import federation from '@originjs/vite-plugin-federation';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tsconfigPaths(),
-    svgr({
-      svgrOptions: {
-        svgo: true,
-        icon: 24,
-        dimensions: true,
-        svgoConfig: {
-          plugins: [
-            { moveGroupAttrsToElems: true },
-            { convertPathData: true },
-          ],
-        },
-      },
-    }),
-    federation({
-      name: 'product-mfe',
-      filename: 'product-mfe-entry.js',
-      shared: ['react', 'react-dom', 'react-router-dom'],
-      remotes: {
-        'store-mfe': 'http://localhost:3002/assets/store-entry.js'
-      },
-      exposes: {
-        './pages': './src/pages',
 
-      },
-    }),
-  ],
   build: {
+    outDir: '../build/product-mfe',
     sourcemap: false,
-    outDir: 'build',
     modulePreload: false,
-    target: 'esnext',
+    target: "esnext",
     minify: false,
     cssCodeSplit: false,
   },
   server: {
     port: 3001,
-    open: true
   },
   preview: {
     port: 3001,
   },
+  plugins: [
+    react(),
+    tsconfigPaths(),
+
+    federation({
+      name: 'product-mfe',
+      filename: 'product-mfe-entry.js',
+      shared: ['react', 'react-dom', 'zustand'],
+      exposes: {
+        './pages': './src/pages',
+      },
+      remotes: {
+        'store-mfe': `http://localhost:3000/store/assets/store-entry.js`
+      },
+
+    }),
+  ],
   test: {
     globals: true,
     environment: 'jsdom',

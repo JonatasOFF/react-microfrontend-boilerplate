@@ -4,7 +4,8 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "dev": "pnpm --stream -r run start-dev"
+        "dev": "pnpm --stream -r run start-dev",
+        "build": "pnpm  --parallel --filter \"./**\" build | pnpm  --parallel --filter \"./**\" build-qa"
     },
     "dependencies": {
         "@emotion/is-prop-valid": "^1.2.1",

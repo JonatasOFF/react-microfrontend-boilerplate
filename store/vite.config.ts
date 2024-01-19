@@ -16,7 +16,7 @@ export default defineConfig({
   ],
   build: {
     sourcemap: false,
-    outDir: "build",
+    outDir: "../build/store",
     modulePreload: false,
     target: "esnext",
     minify: false,
