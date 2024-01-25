@@ -1,3 +1,2 @@
 packages:
-- "product-mfe"
-- "root-app"
+- "packages/*"

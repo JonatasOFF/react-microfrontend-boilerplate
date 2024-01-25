@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 
 export function Home() {
+  const [count,setCount] = useState(0);
+
   return (
     <div>
       Store
