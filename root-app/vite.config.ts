@@ -33,8 +33,7 @@ export default defineConfig(() => {
         filename: 'root-app-entry.js',
         shared: ['react', 'react-dom', 'react-router-dom'],
         remotes: {
-          'product-mfe': `http://localhost:3000/product-mfe/assets/product-mfe-entry.js`,
-          'store-mfe': `http://localhost:3000/store/assets/store-entry.js`
+          'product-mfe': `http://localhost:3000/product-mfe/assets/product-mfe-entry.js`
         },
       }),
     ],

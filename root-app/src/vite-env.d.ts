@@ -7,18 +7,6 @@ declare module 'product-mfe/pages' {
   export default { Home };
 }
 
-declare module "store-mfe/store" {
-  type store = {
-    count: number;
-    increment: () => void;
-    decrement: () => void;
-  }
-
-  export default  {
-    getState: () => store
-  }
-}
-
 declare module '*.svg' {
   import React = require('react');
 

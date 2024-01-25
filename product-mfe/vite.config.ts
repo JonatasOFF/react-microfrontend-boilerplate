@@ -34,10 +34,6 @@ export default defineConfig({
       exposes: {
         './pages': './src/pages',
       },
-      remotes: {
-        'store-mfe': `http://localhost:3000/store/assets/store-entry.js`
-      },
-
     }),
   ],
   test: {
